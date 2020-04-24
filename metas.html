@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PROFIT+</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper  grey darken-4">
+                <a href="#!" class="brand-logo"><img class="logo-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsTZzj-qZq2I6hSO10-wzG8ja8zsa7Y1K97WPu-JWIv22h_8tM" alt="">
+                <span class="title-span"><strong>P</strong>ROFIT+ <strong>I</strong>NTELLIGENCE <strong>P</strong>RICING <strong>S</strong>YSTEM</span>
+                </a>
+                <a href="#!" class="brand-logo-mobile">
+                    <span><strong>P</strong>ROFIT+ <strong>I</strong>NTELLIGENCE <strong>P</strong>RICING <strong>S</strong>YSTEM</span>
+                    </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+                    <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+                    <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+                    <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+                </ul>
+                </div>
+        </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+    </div>
+
+    <div class="wrapper">
+        <div class="container content">
+            <div class="loja">
+                <div class="loja-nome">
+                    <h5><span> Supermercado São Judas Tadeu - OURINHOS</span></h5>
+                </div>
+                <div class="loja-id">
+                    <h5>id:<span> 1615</span></h5>
+                </div>
+            </div>
+            <div class="divider"></div> 
+            <div class="estrategias">
+                <div class="titulo-estrategia">
+                    <h5>Estrategia Comercial: </h5>
+                </div>
+                <div class="opcoes-estrategia">
+                    <div class="option-item">
+                        <label>
+                            <input class="with-gap" name="opt-estrategia" type="radio"
+                            value=1
+                            onclick="radio_change (this)"  />
+                            <span>AGRESSIVIDADE</span>
+                        </label>
+                    </div>
+                    <div class="option-item">
+                        <label>
+                            <input class="with-gap" name="opt-estrategia" type="radio"
+                            value=2
+                            onclick="radio_change (this)"  />
+                            <span>RENTABILIDADE</span>
+                        </label>
+                    </div>
+                    <div class="option-item">
+                        <label>
+                            <input class="with-gap" name="opt-estrategia" type="radio"
+                            value=3
+                            onclick="radio_change (this)"  />
+                            <span>BLOQUEIO</span>
+                        </label>
+                    </div>
+                    <div class="option-item">
+                        <label>
+                            <input class="with-gap" name="opt-estrategia" type="radio"
+                            value=4
+                            onclick="radio_change (this)" 
+                            checked/>
+                            <span>POSICIONAMENTO</span>
+                        </label>
+                    </div>
+                </div>
+            </div>  
+            <div class="divider"></div> 
+           <div class="row params">
+                <div class="box box-meta">
+                    <div class="box-title">Meta de Vendas</div>
+                    <input class="box-value" type="text" id="meta"
+                    onchange="meta_change(this)" 
+                    placeholder="0,00" />
+                    <label>
+                        <input id="opt-faturamento" class="filled-in"name="opt-faturamento" type="checkbox"
+                        onclick="faturamento_change (this)" 
+                        checked
+                        />
+                        <span id="vnd">Venda Bruta</span>
+                    </label>
+                </div>  
+                <div class="box box-margem">
+                    <div class="box-title">margem</div>
+                    <div class="show"><span id="margem" ></span></div>
+                </div>  
+                <div class="box"
+                id="box-impostos">
+                    <div class="box-title">impostos</div>
+                    <div class="show"><span id="imposto" >15%</span></div>
+                </div>  
+                <div class="box box-lucro">
+                    <div class="box-title">lucro</div>
+                    <div class="show"><span id="lucro" >0</span></div>
+                </div>  
+           </div>
+           <div class="divider"></div> 
+           
+           <div class="row" id="table-row">
+           </div>
+        </div>
+    <div class="divider"></div>  
+    </div>
+            
+    
+    <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">PROFIT+</h5>
+                <h6 class="white-text">Inovação e Inteligência para o seu negócio</h6>
+                <p class="grey-text text-lighten-4"> Somos uma empresa especializada no processo de PRICING, atuando no mercado com um conceito inovador e entregando uma solução completa de serviços e tecnologia para melhorar: Competitividade, Receitas e Rentabilidade de seus clientes.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">SAIBA MAIS</h5>
+                <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Pricing de Varejo</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Os sete passos do Pricing</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Nossos Parceiros</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Instituto de Pesquisa de Pricing</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+            © 2020 Copyright Profit+
+            <a class="grey-text text-lighten-4 right" href="www.profitmais.com.br">www.profitmais.com.br</a>
+            </div>
+        </div>
+    </footer>       
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <script src="metas.js"></script>
+          
+    </body>
+</html>
